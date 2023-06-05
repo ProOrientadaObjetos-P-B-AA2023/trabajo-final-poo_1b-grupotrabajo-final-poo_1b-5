@@ -50,7 +50,7 @@ public class Ejecutor {
                                 System.out.println("INGRESE: NOMBRE CONSTRUCTORA; ID EMPRESA");
                                 constructoras.format("%s; %s%n",sc.next(),sc.next());
                                 System.out.println("INGRESE: PRECIO METRO CUADRADO; NUMERO METRO CUDRADO; NUMERO CUARTOS");
-                                casa.add(new Casa(sc.nextDouble(),sc.nextDouble(),sc.nextInt())) ;
+                                casa.add(new Casa(sc.nextDouble(),sc.nextDouble(),sc.nextInt()));
                                 for (Casa c: casa) {
                                     c.calcularCostoFinal();
                                 }
@@ -76,7 +76,9 @@ public class Ejecutor {
                                     casas.format("%s; %s; %s; %s; %.2f; %.2f; %.2f; %d%n",barr[1],prop[0],ciud[0],cons[0],casa.get(i).getCostoFinal(),casa.get(i).getPrecioPorMetroCuadrado(),casa.get(i).getNumeroMetrosCuadrados(),casa.get(i).getNumeroCuartos());
                                     departamentos.format("%s; %s; %s; %s; %.2f; %.2f; %.2f; %.2f; %s; %s%n",barr[1],prop[0],ciud[0],cons[0], departamento.get(i).getCostoFinal(),departamento.get(i).getPrecioMetroCuadrado(),departamento.get(i).getNumeroMetrosCuadrados(),departamento.get(i).getValorAlicuotaMensual(),departamento.get(i).getUbicacionDepartamentoE(),departamento.get(i).getNombreEdificio());
                                     i++;
-                                    if (i+1==departamento.size()){
+                                    System.out.println(i);
+                                    System.out.println(departamento.size());
+                                    if (i==departamento.size()){
                                         break;
                                     }
                                 }
